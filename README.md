@@ -1,7 +1,9 @@
-# ai_companion
+# DESCRIPTION
 
-Chat with ai 
+Chat with ai  
 
-# Live website
+# LIVE WEBSITE
 
 ai-friend-716aa.web.app
+
+# DEMO VIDEO
