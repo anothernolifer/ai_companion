@@ -3,7 +3,7 @@
 Chat with ai  
 
 # LIVE WEBSITE
--[[Visit Website]](ai-friend-716aa.web.app)
+-[[]](ai-friend-716aa.web.app)
 
 
 # DEMO VIDEO
