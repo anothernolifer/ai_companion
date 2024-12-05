@@ -18,7 +18,7 @@ class BoyTextScreen extends ConsumerWidget {
     Future<String> _getHuggingFaceResponse(String text) async {
       final url = Uri.parse(dotenv.env['HUGGING_FACE_API_URL1'] ?? '');
       final headers = {
-        'Authorization': 'Bearer ${dotenv.env['HUGGING_FACE_API_KEY2']}',
+        'Authorization': 'Bearer ${dotenv.env['HUGGING_FACE_API_KEY1']}',
         'Content-Type': 'application/json',
       };
       final body = jsonEncode({
