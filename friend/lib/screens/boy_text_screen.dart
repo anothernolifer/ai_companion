@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:friend/provider/boy_chat_provider.dart';
 import 'package:http/http.dart' as http;
-import 'package:friend/constants/constants.dart';
+
 
 class BoyTextScreen extends ConsumerWidget {
   final TextEditingController _textController = TextEditingController();
