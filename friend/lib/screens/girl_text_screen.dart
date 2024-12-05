@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:friend/provider/girl_chat_provider.dart';
-import 'package:friend/constants/constants.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class GirlTextScreen extends ConsumerWidget {
@@ -15,9 +15,9 @@ class GirlTextScreen extends ConsumerWidget {
     final textInput = ref.watch(textInputProvider);
 
     Future<String> _getHuggingFaceResponse(String text) async {
-      final url = Uri.parse(AppConstants.huggingFaceApiUrl3);
+      final url = Uri.parse(dotenv.env['HUGGING_FACE_API_URL3'] ?? '');
       final headers = {
-        'Authorization': 'Bearer ${AppConstants.huggingFaceApiKey3}',
+        'Authorization': 'Bearer ${dotenv.env['HUGGING_FACE_API_KEY3']}',
         'Content-Type': 'application/json',
       };
       final body = jsonEncode({
