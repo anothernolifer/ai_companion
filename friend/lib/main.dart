@@ -4,7 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:friend/screens/home_screen.dart';
 
-void main() {
+void main() async {
+  await dotenv.load();
   runApp(ProviderScope(child: MyApp()));
 }
 
