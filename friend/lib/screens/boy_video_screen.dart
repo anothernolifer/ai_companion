@@ -7,7 +7,8 @@ import 'package:http/http.dart' as http;
 import 'package:universal_io/io.dart';
 import 'package:video_player/video_player.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:friend/constants/constants.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 
 class BoyVideoScreen extends ConsumerStatefulWidget {
   @override
@@ -73,10 +74,13 @@ class _BoyVideoScreenState extends ConsumerState<BoyVideoScreen>
     ref.read(huggingFaceResponseProvider.notifier).state = 'Opening mic...';
 
     try {
+      final apiKey = dotenv.env['HUGGING_FACE_API_KEY2'] ?? '';  
+      final apiUrl = dotenv.env['HUGGING_FACE_API_URL2'] ?? ''; 
+
       final response = await http.post(
-        Uri.parse(AppConstants.huggingFaceApiUrl2),
+        Uri.parse(apiUrl),
         headers: {
-          'Authorization': 'Bearer ${AppConstants.huggingFaceApiKey2}',
+          'Authorization': 'Bearer $apiKey',
           'Content-Type': 'application/json',
         },
         body: jsonEncode({'inputs': text}),
