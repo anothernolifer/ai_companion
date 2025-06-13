@@ -13,4 +13,8 @@ Chat with ai
 
 # NOTE
 
-Tested in windows only
+ * Tested in windows only
+ *  Used api from huggingface
+
+
+
