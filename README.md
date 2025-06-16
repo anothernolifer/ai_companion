@@ -2,8 +2,6 @@
 
 Chat with ai  
 
-# LIVE WEBSITE
--[[VISIT WEBSITE]](https://ai-friend-716aa.web.app)
 
 
 # DEMO VIDEO
